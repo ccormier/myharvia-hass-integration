@@ -1,0 +1,13 @@
+{
+  "domain": "myharvia",
+  "name": "MyHarvia",
+  "codeowners": [
+    "@ccormier"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/ccormier/myharvia-hass-integration",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/ccormier/myharvia-hass-integration/issues",
+  "version": "0.0.1",
+  "integration_type": "hub"
+}
