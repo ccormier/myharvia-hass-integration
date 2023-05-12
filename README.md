@@ -38,14 +38,11 @@ If you want to contribute to this please read the [Contribution guidelines](CONT
 ***
 
 [myharvia_integration]: https://github.com/ccormier/myharvia-hass-integration
-[commits-shield]: https://img.shields.io/github/commit-activity/y/ludeeus/integration_blueprint.svg?style=for-the-badge
+[commits-shield]: https://img.shields.io/github/commit-activity/y/ccormier/myharvia-hass-integration.svg?style=for-the-badge
 [commits]: https://github.com/ccormier/myharvia-hass-integration/commits/main
 [hacs]: https://github.com/hacs/integration
 [hacsbadge]: https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge
-[exampleimg]: example.png
-[forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg?style=for-the-badge
-[forum]: https://community.home-assistant.io/
-[license-shield]: https://img.shields.io/github/license/ludeeus/integration_blueprint.svg?style=for-the-badge
-[maintenance-shield]: https://img.shields.io/badge/maintainer-Joakim%20Sørensen%20%40ludeeus-blue.svg?style=for-the-badge
-[releases-shield]: https://img.shields.io/github/release/ludeeus/integration_blueprint.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/ccormier/myharvia-hass-integration.svg?style=for-the-badge
+[maintenance-shield]: https://img.shields.io/badge/maintainer-Chris%20Cormier%20%40ccormier-blue.svg?style=for-the-badge
+[releases-shield]: https://img.shields.io/github/release/ccormier/myharvia-hass-integration.svg?style=for-the-badge
 [releases]: https://github.com/ccormier/myharvia-hass-integration/releases
