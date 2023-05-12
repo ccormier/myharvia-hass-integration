@@ -53,14 +53,17 @@ class MyHarviaSwitch(MyHarviaEntity, SwitchEntity):
 
     @property
     def is_on(self) -> bool | None:
+        """Check if entity is on."""
         return cast(bool, self._device.get_reported_state(self.entity_description.key))
 
     async def async_turn_on(self, **kwargs: Any) -> None:
+        """Turn on entity."""
         data = {self.entity_description.key: 1}
         await self._device.async_request_state_change(data)
         await self.coordinator.async_request_refresh()
 
     async def async_turn_off(self, **kwargs: Any) -> None:
+        """Turn off entity."""
         data = {self.entity_description.key: 0}
         await self._device.async_request_state_change(data)
         await self.coordinator.async_request_refresh()

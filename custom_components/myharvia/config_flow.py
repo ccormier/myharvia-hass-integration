@@ -1,11 +1,11 @@
 """Adds config flow for MyHarvia component."""
 from __future__ import annotations
 
-from typing import Any, Dict, Optional
+from typing import Any, Optional
 from homeassistant import config_entries
 from homeassistant.data_entry_flow import FlowResult
 import voluptuous as vol
-from .api import MyHarviaApi
+from .api import MyHarviaApi, MyHarviaApiClientError
 
 from .const import DOMAIN, LOGGER
 
@@ -19,8 +19,9 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     CONNECTION_CLASS = config_entries.CONN_CLASS_CLOUD_POLL
 
     async def async_step_user(
-        self, user_input: Optional[Dict[str, Any]] = None
+        self, user_input: Optional[dict[str, Any]] = None
     ) -> FlowResult:
+        """Handle a flow initialized by the user."""
         errors = {}
 
         if user_input is not None:
@@ -36,7 +37,7 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 return self.async_create_entry(
                     title=user_input["username"], data=user_input
                 )
-            except Exception as exc:
+            except MyHarviaApiClientError as exc:
                 LOGGER.error("Failed to connect to Harvia service: %s", exc)
                 errors["base"] = "cannot_connect"
 
