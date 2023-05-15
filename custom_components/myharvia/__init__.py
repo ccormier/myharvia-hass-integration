@@ -19,6 +19,7 @@ from .coordinator import MyHarviaDataUpdateCoordinator
 PLATFORMS: list[Platform] = [
     Platform.SENSOR,
     Platform.SWITCH,
+    Platform.NUMBER,
 ]
 
 
