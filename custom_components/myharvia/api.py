@@ -153,12 +153,12 @@ class MyHarviaApi:
         }
         await self.async_init()
         LOGGER.debug("config_device: %s", self.config["device"])
-        r = await self.send_request(self.config["device"]["endpoint"], data)
-        device_tree = json.loads(r["data"]["getDeviceTree"])
+        response = await self.send_request(self.config["device"]["endpoint"], data)
+        device_tree = json.loads(response["data"]["getDeviceTree"])
         devices = []
-        for x in device_tree:
-            if "c" in x and x["c"]:
-                devices.extend(c["i"]["name"] for c in x["c"])
+        for dev in device_tree:
+            if "c" in dev and dev["c"]:
+                devices.extend(child["i"]["name"] for child in dev["c"])
 
         return devices
 
